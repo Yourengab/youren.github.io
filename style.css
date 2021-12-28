@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&family=Oswald:wght@200;400&family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins";
+}
+/* Nav */
+nav {
+  display: flex;
+  background-color: #313447;
+  justify-content: space-around;
+  height: 80px;
+  align-items: center;
+  color: #a0a4ba;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+nav .logo {
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 28px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 30%;
+  justify-content: space-between;
+}
+nav ul li a {
+  color: #a0a4ba;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+nav ul li a:hover {
+  color: #dadce4;
+}
+
+/* Menu */
+.menu-toggle span {
+  display: block;
+  width: 38px;
+  height: 4px;
+  background-color: #a0a4ba;
+  border-radius: 3px;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 50px;
+  left: -6px;
+  top: -5px;
+  height: 38px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 23px;
+  justify-content: space-between;
+  position: relative;
+}
+/* Menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-5px, -4px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Jumbotron */
+.jumbotron {
+  padding-top: 10rem;
+  background-color: #10121d;
+  text-align: center;
+  padding-bottom: 18%;
+}
+.jumbotron img {
+  width: 250px;
+  border-radius: 18%;
+  padding-bottom: 20px;
+}
+.jumbotron .lead {
+  font-weight: 250;
+  font-size: 24px;
+  color: white;
+}
+.jumbotron .display-4 {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+}
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  padding: 15% 4% 15% 4%;
+}
+
+.about-me h2 {
+  font-size: 48px;
+}
+.about-me .intro {
+  padding-top: 10px;
+  font-size: 32px;
+}
+.about-me .liq img {
+  width: 300px;
+  height: 500px;
+}
+
+.about-me .text .btn {
+  margin-top: 40px;
+}
+.about-me .btn2 {
+  border-radius: 10px;
+  background-color: #313447;
+  height: 55px;
+  width: 200px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  letter-spacing: 1px;
+}
+.about-me .text a:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.skills {
+  padding-top: 100px;
+  background-color: #10121d;
+}
+#skill svg {
+  margin-bottom: -9px;
+}
+.skills .lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills h2 {
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
+  font-size: 32px;
+}
+.skills .part {
+  margin: 50px;
+  height: 400px;
+  width: 350px;
+  background-color: #4f567a;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+.skills .part.css {
+  height: 450px;
+  transform-style: preserve-3d;
+}
+.part img {
+  display: flex;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  transform: translateZ(50px);
+}
+.tool {
+  padding-top: 200px;
+}
+.skills .tools {
+  justify-content: center;
+
+  align-items: center;
+  display: flex;
+}
+.tools img {
+  display: flex;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  transform: translateZ(50px);
+}
+/* Feedback */
+.feedback-section {
+  background-color: #10121d;
+  padding: 150px 0 100px 0;
+}
+.feedback-section h2 {
+  text-align: center;
+  color: white;
+}
+.feedback-form {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.feedback-form-text {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px auto;
+  border: 0;
+  background: #1c1f30;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+.feedback-form-text:focus {
+  box-shadow: 0 0 10px 4px rgb(6, 5, 12);
+}
+textarea.feedback-form-text {
+  resize: none;
+  height: 120px;
+}
+.feedback-form-btn {
+  float: right;
+  border: 0;
+  background: #282c40;
+  color: white;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.feedback-form-btn:hover {
+  background: #434a6b;
+}
+/* Footer */
+.end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 50vh;
+  background: #10121d;
+}
+footer {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  background: #313447;
+  overflow: hidden;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .social-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 0 0 0;
+}
+footer .social-icon li {
+  list-style: none;
+}
+footer .social-icon li a {
+  font-size: 1.3em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social-icon li a:hover {
+  transform: scale(1.1) translateY(-10px);
+  color: #999;
+}
+footer p {
+  text-align: center;
+  padding-top: 10px;
+  color: white;
+  font-size: 15px;
+}
+footer p i {
+  cursor: pointer;
+  transition: 0.2s;
+}
+footer p i:hover {
+  color: red;
+}
+footer .wave {
+  position: absolute;
+  top: -101px;
+  left: 0;
+  width: 100%;
+  height: 175px;
+  background: #10121d url(img/Wave/image.png);
+  background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_2 4s linear infinite;
+}
+@keyframes animateWave_2 {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
+/* /Responsive */
+
+/* Square Screen */
+@media screen and (max-width: 1100px) {
+  nav ul {
+    width: 40%;
+  }
+  .about-me .liq img {
+    width: 270px;
+    height: 450px;
+  }
+  .about-me h2 {
+    font-size: 40px;
+  }
+  .about-me .intro {
+    font-size: 28px;
+  }
+  .skills .lang {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .skills .part {
+    width: 400px;
+  }
+  .skills .part.css {
+    height: 400px;
+  }
+  .skills .tools {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 920px) {
+  nav ul {
+    width: 55%;
+  }
+  .about-me {
+    flex-direction: column;
+    padding-top: 20% 4% 15% 4%;
+  }
+  .liq {
+    display: flex;
+  }
+  .about-me .liq img {
+    margin: auto;
+    width: 650px;
+    height: 400px;
+    order: 1;
+    border-radius: 50px;
+    align-items: start;
+    justify-items: start;
+  }
+  .about-me .text {
+    padding-top: 50px;
+    order: 2;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50vh;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    z-index: 1;
+    color: rebeccapurple;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  nav ul.slide {
+    background-color: #313447;
+    transform: translateY(0);
+  }
+}
+/* Small Screen */
+@media screen and (max-width: 450px) {
+  .about-me {
+    padding: 20% 4% 15% 4%;
+  }
+  .jumbotron img {
+    width: 200px;
+    border-radius: 18%;
+    padding-bottom: 20px;
+  }
+  .jumbotron .lead {
+    font-weight: 250;
+    font-size: 20px;
+    color: white;
+  }
+  .jumbotron .display-4 {
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+  }
+  .about-me h2 {
+    font-size: 32px;
+  }
+  .about-me .intro {
+    font-size: 22px;
+  }
+  .skills .part {
+    height: 400px;
+    width: 285px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .skills .part {
+    width: 250px;
+    height: 300px;
+  }
+  .skills .part.css {
+    width: 250px;
+    height: 300px;
+  }
+  .skills .part img {
+    width: 120px;
+  }
+  .skills .part.css img {
+    width: 150px;
+  }
+}
