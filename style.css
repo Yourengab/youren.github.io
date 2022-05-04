@@ -100,8 +100,9 @@ nav ul li a:hover {
 }
 .jumbotron img {
   width: 250px;
-  border-radius: 18%;
-  padding-bottom: 20px;
+  height: 250px;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 .jumbotron .lead {
   font-weight: 250;
